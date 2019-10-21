@@ -1,0 +1,155 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    /* padding: 20px 100px 0px 100px; */
+    background: #f3f3f3;
+    /* width: fill; */
+    position: relative;
+    min-height: 100vh;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+textarea {
+    /* width: fill; */
+    /* max-width: 500px; */
+    height: 100%;
+    padding-bottom: 2.5rem;
+}
+
+#addAComm {
+    flex: 1;
+}
+
+.comment {
+    margin-bottom: 4px;
+}
+
+.card {
+    float: center;
+    text-align: center;
+    display: flexbox;
+}
+
+.same-line {
+    display: inline;
+    vertical-align: center;
+    /* text-align: center; */
+    /* margin-right: 3px; */
+    /* font-size: 16px; */
+    /* line-height: 28px; */
+}
+
+img {
+    margin-top: 10px !important;
+    height: 300px;
+    max-width: 50% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.title {
+    text-align: auto !important;
+    margin: 4px;
+}
+
+.buttons {
+    text-align: auto !important;
+    /* text-align: right; */
+}
+
+.avgP {
+    text-align: left !important;
+}
+
+
+/* navbar css */
+
+.navbarNav {
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.navbar-brand {
+    font-size: 30px !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+a.nav-link.link-active {
+    font-size: 30px !important;
+    font-feature-settings: "cpsp";
+    color: #ffffff !important;
+    background-image: linear-gradient(rgba(138, 139, 145, 0.787), rgba(199, 200, 211, 0.068));
+    top: 50%;
+    bottom: 50%;
+}
+
+a.nav-link {
+    font-size: 30px;
+    color: rgb(138, 139, 145) !important;
+    top: 50%;
+    bottom: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/* footer content */
+
+#github-link-cont {
+    padding-top: 5px;
+    padding-left: 5px;
+    float: left;
+}
+
+#linkedin-link-cont {
+    padding-top: 5px;
+    padding-right: 5px;
+    float: right;
+}
+
+footer {
+    width: 100%;
+    height: 2.5rem;
+    /* padding-top: 4px; */
+    flex-shrink: 0;
+    margin-top: 4px;
+    /* margin-top: -50px; */
+    position: absolute;
+    bottom: 0;
+    /* float: center; */
+    scroll-behavior: auto;
+    flex: none;
+    left: 0;
+}
+
+.f-container {
+    /* background-image: linear-gradient(to bottom right, rgba(158, 162, 197, 0.39), rgba(158, 162, 197, 0.637)); */
+    background-color: rgb(59, 59, 62);
+}
+
+.copyright {
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    margin-block-end: 0px !important;
+}

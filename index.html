@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+    <link rel="icon" href="images/athomsiteslogo.png" type="image/icon type">
+    <title>XKCD Browser</title>
+</head>
+
+<body>
+    <!-- navigation bar; all pages -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="http://athomsites.com">athom sites</a>
+        <!-- <button class="navbar" type="button" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true"> 
+    <span class="navbar-toggler-icon"></span>
+    </button> -->
+        <div class="" id="navbarNav">
+            <ul class="nav navbar-nav navbar-right ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">XKCD Browser</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>XKCD Browser</h1>
+    <hr>
+    <var id="app">
+        <p v-if="loading">Loading...</p>
+        <div v-else>
+            <div class="same-line">
+                <h2 class="title">{{current.safe_title}}</h2>
+                <p class="buttons">
+                    <button v-on:click="firstComic">First</button>
+                    <button v-on:click="previousComic">Previous</button>
+                    <button v-on:click="nextComic">Next</button>
+                    <button v-on:click="lastComic">Last</button>
+                    <button v-on:click="randomComic">Random</button>
+                </p>
+            </div>
+
+            <img v-bind:src="current.img" v-bind:alt="current.alt">
+            <p>{{current.alt}}</p>
+            <p><i>#{{current.num}}, drawn on {{current.day}} {{month}} {{current.year}}</i></p>
+        </div>
+
+        <star-rating v-bind:increment="0.5" v-bind:show-rating=false active-color="#FF0000"
+            @rating-selected="setRating"></star-rating>
+        <p class="avgP">
+            Average Rating: {{averageRating}}
+        </p>
+
+        <h2>Add a Comment</h2>
+        <hr>
+        <form v-on:submit.prevent="addComment">
+            <input id="addAComm" v-model="addedName" placeholder="Name"></p>
+            <textarea id="addAComm" v-model="addedComment"></textarea>
+            <br />
+            <button class="comment" type="submit">Comment</button>
+        </form>
+        <h2>Comments</h2>
+        <hr>
+        <div v-for="comment in comments[number]">
+            <p>{{comment.text}}<i> -{{comment.author}} @ {{comment.time}}</i></p>
+            <!-- <p><i>-{{comment.author}}</i></p> -->
+        </div>
+
+        <br> <br> <br>
+    </var>
+
+    <footer>
+        <div class="f-container">
+            <div id="github-link-cont">
+                <a href="https://github.com/alyssathomason/lab-3-vue-alyssathomason.git" id="github-link">GitHub:
+                    alyssathomason/lab-3...git</a>
+            </div>
+            <div id="linkedin-link-cont">
+                <a href="https://www.linkedin.com/in/alyssa-thomason/" id="linkedin-link">LinkedIn: Alyssa Thomason</a>
+            </div>
+            <br>
+            <p class="copyright"> © 2019 athom sites, Inc.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
