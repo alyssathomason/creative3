@@ -1,0 +1,19 @@
+{
+  "name": "creative3",
+  "version": "1.0.0",
+  "description": "CS 260 creative project #3",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyssathomason/creative3.git"
+  },
+  "author": "alyssathomason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alyssathomason/creative3/issues"
+  },
+  "homepage": "https://github.com/alyssathomason/creative3#readme"
+}
